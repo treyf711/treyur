@@ -19,6 +19,7 @@ source=(
   "$_srcname::git+https://git.archlinux.org/linux.git?signed#tag=$_srctag"
   config         # the main kernel config file
   sphinx-workaround.patch
+  navi_reset.patch
 )
 validpgpkeys=(
   'ABAF11C65A2970B130ABE3C479BE3E4300411886'  # Linus Torvalds
@@ -27,7 +28,8 @@ validpgpkeys=(
 )
 sha256sums=('SKIP'
             'ed60b20ee841e16038da0d145fbf3f53fac94122c4001d6cd03abe64e9e760f6'
-            '8cb21e0b3411327b627a9dd15b8eb773295a0d2782b1a41b2a8839d1b2f5778c')
+            '8cb21e0b3411327b627a9dd15b8eb773295a0d2782b1a41b2a8839d1b2f5778c'
+            'WHATEVER THE NAVI_RESET SHA IS')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
